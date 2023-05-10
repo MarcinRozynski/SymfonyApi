@@ -1,0 +1,47 @@
+company_list:
+    path: /api/v1/company
+    controller: App\Controller\CompanyController::indexAction
+    methods: [GET]
+
+company_create:
+    path: /api/v1/company/create
+    controller: App\Controller\CompanyController::createAction
+    methods: [POST]
+
+company_update:
+    path: /api/v1/company/{id}/update
+    controller: App\Controller\CompanyController::updateAction
+    methods: [PATCH]
+    requirements:
+        id: '\d+'
+
+company_delete:
+    path: /api/v1/company/delete/{id}
+    controller: App\Controller\CompanyController::deleteAction
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+employee_list:
+    path: /api/v1/employees
+    controller: App\Controller\EmployeeController::indexAction
+    methods: [GET]
+
+employee_create:
+    path: /api/v1/employees/create
+    controller: App\Controller\EmployeeController::createAction
+    methods: [POST]
+
+employee_update:
+    path: /api/v1/employees/{id}/update
+    controller: App\Controller\EmployeeController::updateAction
+    methods: [PATCH]
+    requirements:
+        id: '\d+'
+
+employee_delete:
+    path: /api/v1/employees/delete/{id}
+    controller: App\Controller\EmployeeController::deleteAction
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
